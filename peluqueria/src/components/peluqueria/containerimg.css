@@ -1,0 +1,11 @@
+.contimg {
+    width: 100%; /* Ocupar todo el ancho de la pantalla */
+    z-index: 1; /* Asegúrate de que el z-index sea menor que el del Navbar */
+}
+  
+  .contimg img {
+    width: 100%;
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* Elimina el espacio adicional debajo de la imagen */
+    
+  }
