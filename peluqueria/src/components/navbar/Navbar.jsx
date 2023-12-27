@@ -23,7 +23,7 @@ const Navbar = () => {
       <ul className={`enlaces ${menuOpen ? "open" : ""}`}>
 
           <li>
-            <Link to="/peluqueria" onClick={closeMenu}>peluqueria</Link>
+            <Link to="/" onClick={closeMenu}>peluqueria</Link>
           </li>
           <li>
             <Link to="/Home" onClick={closeMenu}>Home</Link>
@@ -34,8 +34,17 @@ const Navbar = () => {
           <li>
             <Link to="/contact" onClick={closeMenu}>Contacto</Link>
           </li>
+
+          <li className="registrate" onClick={closeMenu}>
+            <Link to="/registrate"> 
+            registrate
+             </Link>
+          </li>
+          
           <li className="inicioSesion" onClick={closeMenu}>
-            <Link to="/sesion">inicio de sesion</Link>
+            <Link to="/sesion"> 
+            <button>LOGIN</button>
+             </Link>
           </li>
         </ul>
       </nav>

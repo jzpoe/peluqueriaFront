@@ -3,17 +3,18 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  
-}
-.navegacion{
-    width: 100%;
-    z-index: 1000; /* Asegúrate de que el z-index sea mayor que el de la imagen */
+  position: absolute;
 
 }
+
 
 nav ul {
+  position: absolute;
+
     list-style: none;
     display: flex;
+    height: 30px;
+
   }
   
   nav li {
@@ -24,7 +25,13 @@ nav ul {
   .inicioSesion {
     margin-right: 0;
     margin-left: auto;
-  }  a {
+    margin-bottom: 100px;
+  } 
+  .registrate{
+    margin-left: 1110px;
+    margin-top: 15px;
+  }
+  a {
     font-weight: 500;
     color: #646cff;
     text-decoration: inherit;

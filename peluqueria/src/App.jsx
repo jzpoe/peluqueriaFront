@@ -7,6 +7,7 @@ import Nosotros from './components/nosotros/Nosotros';
 import Contacto from './components/contacto/Contacto';
 import Sesion from './sesion/Sesion';
 import Peluqueria from './components/peluqueria/Peluqueria';
+import Login from './components/login/Login';
 
 
 
@@ -22,12 +23,11 @@ function App() {
 
       
       <Routes>
-      <Route path='/peluqueria' element={<Peluqueria/>} />
-
+      <Route path='/' element={<Peluqueria/>} />
         <Route path='/Home' element={<Home/>} />
         <Route path='/about' element={<Nosotros/>} />
         <Route path='/contact' element={<Contacto/>} />
-        <Route path='/sesion' element={<Sesion/>} />
+        <Route path='/sesion' element={<Login/>} />
       </Routes>
 
       </BrowserRouter>
