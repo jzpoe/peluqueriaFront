@@ -8,11 +8,7 @@
   
 }
 
-.app-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centra el contenido horizontalmente */
-}
+
 
 /* Ajusta según sea necesario */
 

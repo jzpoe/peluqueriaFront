@@ -23,7 +23,7 @@ const Login = () => {
         {loggedIn ? (
           <div>
             <p>Bienvenido, {username}!</p>
-            <button onClick={handleLogout}>Cerrar Sesión</button>
+            <button className="bton-Inicio" onClick={handleLogout} >Cerrar Sesión</button>
           </div>
         ) : (
           <div>
@@ -43,7 +43,7 @@ const Login = () => {
                 onChange={(e) => setPassword(e.target.value)}
               />
             </label>
-            <button onClick={handleLogin}>Iniciar Sesión</button>
+            <button className="bton-Inicio" onClick={handleLogin} >Iniciar Sesión</button>
           </div>
         )}
       </div>
