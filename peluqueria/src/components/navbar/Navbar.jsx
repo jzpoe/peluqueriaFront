@@ -43,7 +43,7 @@ const Navbar = () => {
           
           <li className="inicioSesion" onClick={closeMenu}>
             <Link to="/sesion"> 
-            <button>LOGIN</button>
+            <button className="btn-login">LOGIN</button>
              </Link>
           </li>
         </ul>

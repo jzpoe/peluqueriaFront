@@ -24,7 +24,6 @@ nav ul {
   /* Alinea el último elemento (inicio de sesión) a la derecha */
   .inicioSesion {
     margin-right: 0;
-    margin-left: auto;
     margin-bottom: 100px;
   } 
   .registrate{
@@ -42,22 +41,24 @@ nav ul {
   @media screen and (min-width: 601px) {
     .menuhamburger {
       display: none;
-      
-  
     }
+    
+      
+
+   
+    
   }
-  @media (max-width: 601px) {
+  @media screen and (max-width: 601px) {
+   
   .container-navbar {
     position: relative;
     flex-direction: column;
     align-items: flex-start;
   }
-  .inicioSesion {
-    margin-right: 0;
-    margin-left: 700px;
-    margin-bottom: 10px;
-    position: absolute;
-  } 
+  .registrate{
+    margin: 0;
+  }
+  
   .enlaces.open {
     display: flex;
     justify-content: center;
@@ -96,25 +97,5 @@ nav ul {
     margin-bottom: 10px;
   }
 
-  /* Muestra el menú cuando el usuario hace clic en el botón */
-  #menu-btn:checked + nav ul {
-    display: flex;
-  }
 
-  /* Oculta el checkbox */
-  #menu-btn {
-    display: none;
-  }
-
-  /* Estilos para el botón de hamburguesa */
-  .menu-icon {
-    display: block;
-    cursor: pointer;
-  }
-
-  .menu-icon:before {
-    content: '\2630'; /* Unicode para el símbolo de hamburguesa */
-    font-size: 24px;
-    color: #646cff;
-  }
 }

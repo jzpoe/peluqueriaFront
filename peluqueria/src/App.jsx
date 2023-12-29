@@ -5,7 +5,6 @@ import Navbar from './components/navbar/Navbar';
 import Home from './components/home/Home';
 import Nosotros from './components/nosotros/Nosotros';
 import Contacto from './components/contacto/Contacto';
-import Sesion from './sesion/Sesion';
 import Peluqueria from './components/peluqueria/Peluqueria';
 import Login from './components/login/Login';
 

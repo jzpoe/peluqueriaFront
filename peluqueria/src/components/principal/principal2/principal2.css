@@ -1,0 +1,23 @@
+.carousel-root {
+    max-width: 300px; /* Ancho máximo del contenedor del carrusel */
+    margin: 0 auto;   /* Centrar el carrusel horizontalmente */
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 10px;
+  }
+  
+  .carousel.carousel-slider {
+    max-width: 250px; /* Ancho máximo del contenedor del carrusel slider */
+    margin: 0 auto;   /* Centrar el carrusel slider horizontalmente */
+  }
+  
+  .carousel .control-arrow {
+    width: 20px;      /* Ancho de las flechas de navegación */
+    height: 90px;     /* Altura de las flechas de navegación */
+  }
+
+  .imagenMujer img {
+  max-width: 100%;
+  height: auto;
+}
