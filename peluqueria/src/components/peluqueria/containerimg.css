@@ -34,6 +34,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
   grid-gap: 10px;
+  justify-content: center; /* Centra las columnas horizontalmente */
 
 }
 
@@ -52,9 +53,12 @@
     font-size: 3vw;
   }
   .btn-cita{
-    top: 30%;
+    top: 25%;
     left: 50%;
     font-size: 2vw;
+  }
+  .parrafoCortes{
+    font-size: 30px;
   }
 }
 
@@ -68,6 +72,12 @@
   .btn-cita {
     top: 30%;
     font-size: 2vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .containerImagenes {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Ajusta el ancho mínimo de las columnas */
   }
 }
 
