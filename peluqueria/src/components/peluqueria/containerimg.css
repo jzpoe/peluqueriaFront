@@ -38,11 +38,12 @@
   background-color: #45a049;
 }
 .containerImagenes{
-  margin: 50px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-  grid-gap: 10px;
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  grid-gap: 4px;
+  margin: 40px;
   justify-content: center; /* Centra las columnas horizontalmente */
+ align-items: center;
 
 }
 
@@ -70,6 +71,19 @@
   }
 }
 
+@media screen and (max-width: 600px) {
+  .textoImagen {
+    top: 20%;
+    left: 50%;
+    font-size: 3vw;
+  }
+
+  .btn-cita {
+    top: 150px;
+    font-size: 2vw;
+  }
+}
+
 @media screen and (min-width: 601px) {
   .textoImagen {
     top: 20%;
@@ -78,14 +92,15 @@
   }
 
   .btn-cita {
-    top: 30%;
+    top: 40%;
     font-size: 2vw;
   }
 }
 
+
 @media (max-width: 768px) {
   .containerImagenes {
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Ajusta el ancho mínimo de las columnas */
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Ajusta el ancho mínimo de las columnas */
   }
 }
 

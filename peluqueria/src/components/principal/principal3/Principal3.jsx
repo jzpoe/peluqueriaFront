@@ -1,6 +1,6 @@
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-
+import '/src/components/principal/principal1/principal.css'
 const Principal3 = () => {
   return (
     <Carousel showArrows={true} infiniteLoop={true} className="carousel-root">

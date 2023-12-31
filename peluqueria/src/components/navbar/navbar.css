@@ -20,15 +20,13 @@
   align-items: center;
 }
 
-.enlaces.open {
-  justify-content: center;
-  align-items: center;
+.enlaces.open  {
+  
   top: 0; /* Cambiado a 0 */
-  position: fixed;
-  display: flex; /* Deja solo una vez */
-  flex-direction: column;
+  position: absolute;
+  
  width: 100px;
- transform: translateX(1%);
+ transform: translateX(10%);
  background-color: transparent /* Color de fondo del menú */
 
 }
@@ -97,8 +95,7 @@ li {
   }
   @media screen and (max-width: 601px) {
     
-    .enlaces {
-    }
+    
   .container-navbar {
     position: relative;
     flex-direction: column;

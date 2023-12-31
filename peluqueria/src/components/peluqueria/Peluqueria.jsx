@@ -1,6 +1,6 @@
 
 
-import Principal from "../principal/Principal"
+import Principal from "../principal/principal1/Principal"
 import Principal2 from "../principal/principal2/Principal2"
 import Principal3 from "../principal/principal3/Principal3"
 import "./containerimg.css"

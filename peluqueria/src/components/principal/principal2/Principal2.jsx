@@ -1,6 +1,6 @@
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import './principal2.css'
+import '/src/components/principal/principal1/principal.css'
 const Principal2 = () => {
   return (
     
