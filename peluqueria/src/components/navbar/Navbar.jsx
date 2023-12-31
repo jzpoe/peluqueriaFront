@@ -16,13 +16,11 @@ const Navbar = () => {
   
 
   return (
-    <div className={`enlaces ${menuOpen ? "open" : ""}`}>
-      <button className="menu-icon" onClick={toggleMenu}>
-        <div className="bar"></div>
-        <div className="bar"></div>
-        <div className="bar"></div>
+    <div className={`menu-container ${menuOpen ? 'open' : ''}`}>
+      <button className="menu-button" onClick={toggleMenu}>
+        ☰
       </button>
-<div className="menu-content">
+      <div className="menu-content">
       <ul>
         <li>
           <Link to="/" onClick={closeMenu}>
@@ -55,6 +53,7 @@ const Navbar = () => {
           </Link>
         </li>
       </ul>
+    
       </div>
       <Outlet />
     </div>
