@@ -4,7 +4,7 @@ import "./navbar.css";
 import { Link, Outlet } from "react-router-dom";
 
 const Navbar = () => {
-  const [menuOpen, setMenuOpen] = useState(true);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -20,6 +20,9 @@ const Navbar = () => {
       <button className="menu-button" onClick={toggleMenu}>
         ☰
       </button>
+      <div className="container-content">
+
+      
       <div className="menu-content">
       <ul>
         <li>
@@ -54,6 +57,7 @@ const Navbar = () => {
         </li>
       </ul>
     
+      </div>
       </div>
       <Outlet />
     </div>

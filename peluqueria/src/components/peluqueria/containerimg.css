@@ -61,15 +61,15 @@
   .textoImagen {
     top: 20%;
     left: 50%;
-    font-size: 4vw;
+    font-size: 6vw;
   }
   .contimg img{
     height: 70vh;
   }
   .btn-cita{
-    top: 30%;
+    top: 35%;
     left: 50%;
-    font-size: 2vw;
+    font-size: 5vw;
     width: 150px;
     height: 50px;
   }
