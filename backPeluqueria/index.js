@@ -15,8 +15,8 @@ app.use(cors());
 
 
 
-app.use(register)
-app.use(login)
+app.options('/register', cors());
+app.options('/login', cors());
 
 app.get('/api', (req, res)=>{
     res.send('bienvenido')
