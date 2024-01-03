@@ -1,38 +1,61 @@
 // import { Link } from "react-router-dom";
 import "./login.css"
+import axios from "../axios/Axios";
+
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 
 const Login = () => {
-    const [username, setUsername] = useState('');
+    //const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [loggedIn, setLoggedIn] = useState(false);
-  
-    const handleLogin = () => {
-      // Aquí puedes agregar lógica de autenticación
-      // En este ejemplo, simplemente marcamos al usuario como autenticado
-      setLoggedIn(true);
+
+    const navigate = useNavigate();
+
+
+    const handleLogin =  async (e) => {
+      e.preventDefault();
+
+      try {
+        const response = await axios.post("/sesion", {
+          
+          email,
+          password,
+        });
+
+        if (response.data.message === "Bienvenido") {
+          navigate("/", {
+            replace: true,
+            state: {
+              logged: true,
+            },
+          });
+        }
+
+      } catch (error) {
+        console.error("Error al iniciar sesion", error);
+
+      }
+
+      
     };
   
-    const handleLogout = () => {
-      // Lógica para cerrar sesión
-      setLoggedIn(false);
-    };
+    // const handleLogout = () => {
+    //   // Lógica para cerrar sesión
+    //   setLoggedIn(false);
+    // };
   
     return (
       <div className="app">
-        {loggedIn ? (
-          <div>
-            <p>Bienvenido, {username}!</p>
-            <button className="bton-Inicio" onClick={handleLogout} >Cerrar Sesión</button>
-          </div>
-        ) : (
+        
           <div>
             <label>
-              Usuario:
+              CORREO:
               <input
-                type="text"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
             </label>
             <label>
@@ -45,7 +68,7 @@ const Login = () => {
             </label>
             <button className="bton-Inicio" onClick={handleLogin} >Iniciar Sesión</button>
           </div>
-        )}
+        
       </div>
     );
   };

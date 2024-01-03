@@ -1,3 +1,4 @@
+import './register.css'
 import { useState } from "react";
 import axios from "../axios/Axios";
 import { useNavigate } from "react-router-dom";
@@ -8,7 +9,7 @@ const Register = () => {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  const handleLogin = async (e) => {
+  const handleRegister = async (e) => {
     e.preventDefault();
 
     try {
@@ -19,7 +20,7 @@ const Register = () => {
       });
 
       if (response.data.message === "Usuario registrado exitosamente") {
-        navigate("/Login", {
+        navigate("/sesion", {
           replace: true,
           state: {
             logged: true,
@@ -33,7 +34,7 @@ const Register = () => {
 
   return (
     <div className="container-register">
-      <form onSubmit={handleLogin}>
+      <form onSubmit={handleRegister}>
         <div className="input-name">
           <label>NOMBRE</label>
           <input
@@ -59,7 +60,7 @@ const Register = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
-        <button type="submit">registrate</button>
+        <button className="bton-registrar" type="submit">registrate</button>
       </form>
     </div>
   );

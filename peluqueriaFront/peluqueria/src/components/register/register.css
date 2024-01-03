@@ -1,0 +1,46 @@
+.container-register {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+  }
+  
+  .bton-registrar {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .bton-registrar:hover {
+    background-color: #45a049;
+  }
+  
+  /* Estilos adicionales para el mensaje de bienvenida y cerrar sesión */
+  p {
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .bton-registrar {
+    margin-top: 10px;
+  }
+  @media screen and (max-width: 601px) {
+    
+  }
