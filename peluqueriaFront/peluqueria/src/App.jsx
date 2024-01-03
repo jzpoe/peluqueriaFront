@@ -7,6 +7,7 @@ import Nosotros from './components/nosotros/Nosotros';
 import Contacto from './components/contacto/Contacto';
 import Peluqueria from './components/peluqueria/Peluqueria';
 import Login from './components/login/Login';
+import Register from './components/register/Register';
 
 
 
@@ -26,6 +27,7 @@ function App() {
         <Route path='/Home' element={<Home/>} />
         <Route path='/about' element={<Nosotros/>} />
         <Route path='/contact' element={<Contacto/>} />
+        <Route path='/registrate' element={<Register/>} />
         <Route path='/sesion' element={<Login/>} />
       </Routes>
 
