@@ -7,13 +7,21 @@ const app = express();
 const cors = require('cors');
 require('dotenv').config();
 
-app.use(cors()); 
-const port = process.env.PORT
+
+const corsOptions = {
+    origin: 'https://peluqueria-riht.vercel.app',
+  };
+  
+  app.use(cors(corsOptions));
+
+
 app.use(express.json());
    
 
-app.use(register, cors());
-app.use(login, cors());
+app.use(register);
+app.use(login);
+
+const port = process.env.PORT
 
 app.get('/api', (req, res)=>{
     res.send('bienvenido')
