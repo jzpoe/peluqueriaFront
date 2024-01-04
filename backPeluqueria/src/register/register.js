@@ -4,6 +4,9 @@ const router = express.Router();
 const registro = require('../db/db');
 const bcrypt = require('bcrypt');
 
+
+
+
 router.post('/register', async (req, res) => {
   try {
     const { name, email, password } = req.body;
