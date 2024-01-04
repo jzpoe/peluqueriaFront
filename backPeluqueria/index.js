@@ -10,19 +10,17 @@ require('dotenv').config();
 
 const corsOptions = {
     origin: 'https://peluqueria-riht.vercel.app',
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
-    credentials: true,  // Habilita el uso de credenciales (cookies, encabezados de autorización, etc.)
-    optionsSuccessStatus: 204,  // Cambia el código de estado de las respuestas OPTIONS exitosas a 204
+
 };
   
-  app.use(cors(corsOptions));
 
 
 app.use(express.json());
    
-
-app.use(register);
+app.use('/sesion', cors(corsOptions));
 app.use(login);
+app.use('/register', cors(corsOptions));
+app.use(register);
 
 const port = process.env.PORT
 
