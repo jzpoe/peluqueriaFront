@@ -7,16 +7,13 @@ const app = express();
 const cors = require('cors');
 require('dotenv').config();
 
-
+app.use(cors()); 
 const port = process.env.PORT
 app.use(express.json());
-app.use(cors());
+   
 
-
-
-
-app.options('/register', cors());
-app.options('/login', cors());
+app.use(register, cors());
+app.use(login, cors());
 
 app.get('/api', (req, res)=>{
     res.send('bienvenido')
