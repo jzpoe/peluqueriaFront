@@ -1,8 +1,9 @@
+import AvailableHours from "../AvailableHours/AvailableHoursPost"
 
 const Contacto = () => {
   return (
     <div>
-      hello
+      <AvailableHours/>
     </div>
   )
 }

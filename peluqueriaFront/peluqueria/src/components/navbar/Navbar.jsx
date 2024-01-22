@@ -43,8 +43,8 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
-          <Link to="/Home" onClick={closeMenu}>
-            Home
+          <Link to="/Upload" onClick={closeMenu}>
+            Carga Imagen
           </Link>
         </li>
         <li>
