@@ -1,22 +1,20 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Principal from "../principal/principal1/Principal";
 import Principal2 from "../principal/principal2/Principal2";
 import Principal3 from "../principal/principal3/Principal3";
 import "./containerimg.css";
 import ScrollReveal from "scrollreveal";
+import Swal from 'sweetalert2';
+
 ScrollReveal({ reset: true });
 
 const Peluqueria = () => {
-  const clearToken = () => {
-    localStorage.removeItem("token");
-  };
-
-  const isLoggedIn = () => {
-    const token = localStorage.getItem("token");
-    return !!token;
-  };
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
+    const token = localStorage.getItem("token");
+    setIsLoggedIn(!!token);
+
     ScrollReveal().reveal(".textoImagen", {
       duration: 1000,
       reset: true,
@@ -35,6 +33,36 @@ const Peluqueria = () => {
     });
   }, []);
 
+  const handleLogOut = async () => {
+    const result = await mostrarAlerta();
+
+    if (result.isConfirmed) {
+      clearToken();
+    } else {
+      console.log('Operación cancelada');
+    }
+  }
+
+  const clearToken = () => {
+    localStorage.removeItem("token");
+    setIsLoggedIn(false);
+  }
+
+  const mostrarAlerta = async () => {
+    const result = await Swal.fire({
+      title: '¡Alerta!',
+      text: '¿Deseas cerrar sesión?',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Sí',
+      cancelButtonText: 'No',
+    });
+
+    return {
+      isConfirmed: result.isConfirmed,
+    };
+  };
+
   return (
     <div className="contimg">
       <img src="img/salon.jpg" alt="imagen de peluqueria" />
@@ -47,11 +75,10 @@ const Peluqueria = () => {
         <Principal3 />
       </div>
       <div className="container-btn">
-      {isLoggedIn() && (
-        <button onClick={clearToken} className="btn-cerrar-sesio">Cerrar sesión</button>
-      )}
+        {isLoggedIn && (
+          <button onClick={handleLogOut} className="btn-cerrar-sesio">Cerrar sesión</button>
+        )}
       </div>
-       
     </div>
   );
 };
