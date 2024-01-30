@@ -8,6 +8,8 @@ import axios from "../axios/Axios";
 import es from 'date-fns/locale/es';
 import './AvailableHours.css'; // Importa tu archivo de estilos aquí
 import AvailableRender from './AvailableRender';
+import HorasAvailables from './horasAvailables';
+
 registerLocale('es', es);
 
 const AvailableHours = () => {
@@ -17,10 +19,10 @@ const AvailableHours = () => {
 
   const sendFecha = async () => {
     console.log('fecha seleccionada', { startDate });
-
+    const token = localStorage.getItem('token');
     try {
       //const response = await axios.post('/sendFecha', { startDate: startDate.toISOString() });
-      const response = await axios.post('/sendFecha', { startDate: startDate.toISOString() });
+      const response = await axios.post('/sendFecha', {Headers:{Authorization: `Bearer${token}`} }, { startDate: startDate.toISOString() });
 
      //const response = await axios.post('/sendFecha', { startDate });
       console.log(response);
@@ -53,6 +55,7 @@ const AvailableHours = () => {
     </div>
     <div>
       <AvailableRender/>
+      <HorasAvailables/>
     </div>
    
     </>

@@ -18,6 +18,7 @@ const AvailableRender = () => {
         }
         fetchAvailable();
     },[])
+    
   return (
     <div>
       {
